@@ -486,4 +486,4 @@ class LSWrappers {
 		handledTypes["UTIs"] = !handledUTIs.isEmpty ? handledUTIs : [:]
 		return handledTypes
 	}
-}
+
