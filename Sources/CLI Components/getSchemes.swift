@@ -21,7 +21,7 @@ class GetSchemes: Command {
 		if let output = copyDictionaryAsString(LSWrappers.Schemes.copySchemesAndHandlers()?.sorted(by: { $0.0 < $1.0 })) {
 			print(output)
 		}
-		else { throw CLIError.error("SwiftDefaultApps ERROR: Couldn't generate list of URI Schemes.") }
+		else { throw CLI.Error("SwiftDefaultApps ERROR: Couldn't generate list of URI Schemes.") }
 		
 	}
 }
