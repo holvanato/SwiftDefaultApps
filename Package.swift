@@ -8,7 +8,7 @@ let package = Package(
 		.executable(name: "CLI", targets: ["SWDA-CLI"])
 	],
 	dependencies: [
-		.package(url: "https://github.com/Lord-Kamina/SwiftCLI", from: Version("2.0.3+swift5"))
+		.package(url: "https://github.com/jakeheis/SwiftCLI", from: "6.0.0")
 	],
 	targets: [
 		.target(
