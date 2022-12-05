@@ -61,6 +61,7 @@ class LSWrappers {
 			}
 			
 		}
+
 		/**
 		Print a user-readable error message for each error code.
 		
@@ -88,6 +89,8 @@ class LSWrappers {
 			return retValue
 		}
 	}
+}
+
 	/**
 	Groups functions dealing with UTIs.
 	*/
