@@ -84,7 +84,7 @@ class SetCommand: OptionCommand {
 			break
 		}
 		do {
-			try displayAlert(error: statusCode, arg1: (bundleID != nil ? bundleID : inApplication), arg2: self.contentType ?? self.kind)
+			helpMessageGenerator.writeUsageStatement(for: error, to: stderr)
 		} catch { print(error) }
 	}
 }
