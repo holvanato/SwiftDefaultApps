@@ -89,7 +89,7 @@ class LSWrappers {
 			return retValue
 		}
 	}
-}
+
 
 	/**
 	Groups functions dealing with UTIs.
@@ -486,4 +486,5 @@ class LSWrappers {
 		handledTypes["UTIs"] = !handledUTIs.isEmpty ? handledUTIs : [:]
 		return handledTypes
 	}
+}
 
