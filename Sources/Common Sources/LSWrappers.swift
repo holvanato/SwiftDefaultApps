@@ -179,7 +179,7 @@ class LSWrappers {
 		*/
 		static func setDefaultHandler (_ inContent: String, _ inBundleID: String, _ inRoles: LSRolesMask = LSRolesMask.all) -> OSStatus {
 			var retval: OSStatus = 0
-			if (LSWrappers.isAppInstalled(withBundleID: inBundleID) == true) {
+			if (isAppInstalled(withBundleID: inBundleID) == true) {
 				retval = LSSetDefaultRoleHandlerForContentType(inContent as CFString, inRoles, inBundleID as CFString)
 			}
 			else { retval = kLSApplicationNotFoundErr }
@@ -293,7 +293,7 @@ class LSWrappers {
 		static func setDefaultHandler (_ inScheme: String, _ inBundleID: String) -> OSStatus {
 			var retval: OSStatus = kLSUnknownErr
 			if ((inScheme =~ /"\\A[a-zA-Z][a-zA-Z0-9.+-]+$") == true) {
-				if (LSWrappers.isAppInstalled(withBundleID:inBundleID) == true) {
+				if (isAppInstalled(withBundleID:inBundleID) == true) {
 					retval = LSSetDefaultHandlerForURLScheme((inScheme as CFString), (inBundleID as CFString))
 				}
 				else { retval = kLSApplicationNotFoundErr }
