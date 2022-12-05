@@ -66,7 +66,7 @@ internal class SWDATreeRow:NSObject {
 	/** Bindings-compatible determination of the font to use. */
 	@objc var rowFont: NSFont? {
 		switch self.rowLevel {
-		case .header: return self.baseFont.smallCaps()
+		case .header: return self.baseFont.bold()
 		case .role: return self.baseFont.bold()
 		default: return self.baseFont
 		}
